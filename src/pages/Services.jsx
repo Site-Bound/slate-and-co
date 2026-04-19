@@ -4,6 +4,7 @@ import { useReveal } from '../hooks/useReveal'
 const SERVICES = [
   {
     num: '01',
+    id: 'new-roofs',
     title: 'New Roofs',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 10.5L12 3l9 7.5V21H3V10.5z"/></svg>,
     intro: 'Whether your roof is past its best or you are building something new, we manage the full installation from survey to sign-off.',
@@ -12,6 +13,7 @@ const SERVICES = [
   },
   {
     num: '02',
+    id: 'roof-repairs',
     title: 'Roof Repairs',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path strokeLinecap="round" strokeLinejoin="round" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>,
     intro: 'From a single slipped slate to a persistent leak that nobody else has been able to track down — we find it and fix it properly.',
@@ -20,6 +22,7 @@ const SERVICES = [
   },
   {
     num: '03',
+    id: 'flat-roofs',
     title: 'Flat Roofs',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 12h16M4 16h16"/></svg>,
     intro: 'Modern flat roof systems installed correctly — that means proper falls, quality waterproofing, and a result that lasts 25 years or more.',
@@ -28,6 +31,7 @@ const SERVICES = [
   },
   {
     num: '04',
+    id: 'guttering-fascias',
     title: 'Guttering & Fascias',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 3h12M6 3a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2M6 3v3m12-3v3M6 6h12"/></svg>,
     intro: 'Blocked, sagging, or cracked gutters quietly cause serious damage. We replace or repair them properly before it becomes a bigger problem.',
@@ -36,6 +40,7 @@ const SERVICES = [
   },
   {
     num: '05',
+    id: 'chimney-work',
     title: 'Chimney Work',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>,
     intro: 'Chimneys take a battering from London weather. Failed flashing and crumbling mortar are two of the most common sources of hidden damp.',
@@ -44,6 +49,7 @@ const SERVICES = [
   },
   {
     num: '06',
+    id: 'emergency-call-outs',
     title: 'Emergency Call Outs',
     icon: <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
     intro: 'When storm damage or an active leak cannot wait, we respond fast to make your property safe and weathertight.',
@@ -78,9 +84,10 @@ export default function Services() {
 
       {/* Services */}
       <div ref={pageRef}>
-        {SERVICES.map(({ num, title, icon, intro, body, points }, i) => (
+        {SERVICES.map(({ num, id, title, icon, intro, body, points }, i) => (
           <section
             key={num}
+            id={id}
             style={{
               background: i % 2 === 0 ? '#f6f1e9' : '#ece5da',
               padding: 'clamp(56px,7vw,96px) 0',
@@ -98,7 +105,7 @@ export default function Services() {
             </div>
 
             <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '80px', alignItems: 'start' }} className="grid-cols-1 lg:grid-cols-2">
+              <div style={{ gap: '80px', alignItems: 'start' }} className="grid grid-cols-1 lg:grid-cols-2">
 
                 {/* Left */}
                 <div className="reveal-left">
@@ -123,7 +130,7 @@ export default function Services() {
                   <p style={{ fontFamily: "'Lora',serif", fontSize: '15px', lineHeight: 1.85, color: '#5a7080', marginBottom: '28px' }}>
                     {body}
                   </p>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 24px' }}>
+                  <div style={{ gap: '10px 24px' }} className="grid grid-cols-1 sm:grid-cols-2">
                     {points.map(p => (
                       <div key={p} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                         <div style={{ width: '6px', height: '6px', background: '#e09118', flexShrink: 0, marginTop: '6px' }} />

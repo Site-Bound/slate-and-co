@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
 
+const SERVICE_LINKS = [
+  { label: 'New Roofs', to: '/services#new-roofs' },
+  { label: 'Roof Repairs', to: '/services#roof-repairs' },
+  { label: 'Flat Roofs', to: '/services#flat-roofs' },
+  { label: 'Guttering & Fascias', to: '/services#guttering-fascias' },
+  { label: 'Chimney Work', to: '/services#chimney-work' },
+  { label: 'Emergency Call Outs', to: '/services#emergency-call-outs' },
+]
+
 const AREAS = ['Croydon', 'Bromley', 'Lewisham', 'Greenwich', 'Southwark', 'Hackney', 'Islington', 'Barnet', 'Enfield', 'Walthamstow']
 
 export default function Footer() {
@@ -31,12 +40,12 @@ export default function Footer() {
           <div>
             <div style={{ fontFamily: "'Big Shoulders Display',sans-serif", fontWeight: 700, fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#e09118', marginBottom: '20px' }}>Services</div>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {['New Roofs', 'Roof Repairs', 'Flat Roofs', 'Guttering & Fascias', 'Chimney Work', 'Emergency Call Outs'].map(s => (
-                <li key={s}>
-                  <Link to="/services" style={{ fontFamily: "'Lora',serif", fontSize: '13px', color: '#6e8aaa', textDecoration: 'none', transition: 'color 0.2s' }}
+              {SERVICE_LINKS.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} style={{ fontFamily: "'Lora',serif", fontSize: '13px', color: '#6e8aaa', textDecoration: 'none', transition: 'color 0.2s' }}
                     onMouseEnter={e => e.target.style.color = '#bfcfe8'}
                     onMouseLeave={e => e.target.style.color = '#6e8aaa'}
-                  >{s}</Link>
+                  >{label}</Link>
                 </li>
               ))}
             </ul>

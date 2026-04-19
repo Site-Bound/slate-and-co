@@ -188,7 +188,7 @@ export default function Home() {
             background: 'rgba(255,255,255,0.02)',
           }}
         >
-          <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '24px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }} className="sm:grid-cols-4">
+          <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '24px', gap: '16px' }} className="grid grid-cols-2 sm:grid-cols-4">
             {TRUST.map(({ fig, sub }) => (
               <div key={sub} style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                 <div style={{ width: '2px', height: '40px', background: '#e09118', flexShrink: 0 }} />
@@ -246,7 +246,7 @@ export default function Home() {
         </div>
 
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start', marginBottom: '64px' }} className="grid-cols-1 md:grid-cols-2">
+          <div style={{ gap: '64px', alignItems: 'start', marginBottom: '64px' }} className="grid grid-cols-1 md:grid-cols-2">
             <div>
               <div className="label-static reveal" style={{ color: '#e09118', marginBottom: '20px' }}>Why Choose Us</div>
               <h2 className="display reveal d1" style={{ fontSize: 'clamp(40px,5.5vw,70px)', color: '#f6f1e9', lineHeight: 0.92 }}>
@@ -275,7 +275,7 @@ export default function Home() {
       {/* ── ABOUT SNIPPET ── */}
       <section ref={aboutRef} style={{ background: '#ece5da', padding: 'clamp(64px,8vw,112px) 0' }}>
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }} className="grid-cols-1 md:grid-cols-2">
+          <div style={{ gap: '80px', alignItems: 'center' }} className="grid grid-cols-1 md:grid-cols-2">
 
             {/* Left: large decorative stat */}
             <div className="reveal-left">

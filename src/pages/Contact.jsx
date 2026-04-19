@@ -47,7 +47,7 @@ export default function Contact() {
       {/* Main contact section */}
       <section ref={ref} style={{ background: '#f6f1e9', padding: 'clamp(64px,8vw,112px) 0' }}>
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '80px', alignItems: 'start' }} className="grid-cols-1 lg:grid-cols-2">
+          <div style={{ gap: '80px', alignItems: 'start' }} className="grid grid-cols-1 lg:grid-cols-2">
 
             {/* Form */}
             <div className="reveal-left">
@@ -69,7 +69,7 @@ export default function Contact() {
                     Tell Us About Your Roof
                   </h2>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+                  <div style={{ gap: '20px', marginBottom: '20px' }} className="grid grid-cols-1 sm:grid-cols-2">
                     <div>
                       <label className="form-label">Full Name <span style={{ color: '#e09118' }}>*</span></label>
                       <input name="name" value={form.name} onChange={change} placeholder="Your name" className={`form-input${errors.name ? ' error' : ''}`} />
@@ -84,7 +84,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+                  <div style={{ gap: '20px', marginBottom: '20px' }} className="grid grid-cols-1 sm:grid-cols-2">
                     <div>
                       <label className="form-label">Phone Number</label>
                       <input name="phone" value={form.phone} onChange={change} placeholder="07000 000000" type="tel" className={`form-input${errors.contact ? ' error' : ''}`} />

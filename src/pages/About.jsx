@@ -34,7 +34,7 @@ export default function About() {
       {/* Story section */}
       <section ref={ref1} style={{ background: '#f6f1e9', padding: 'clamp(64px,8vw,112px) 0' }}>
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="grid-cols-1 lg:grid-cols-2">
+          <div style={{ gap: '80px', alignItems: 'start' }} className="grid grid-cols-1 lg:grid-cols-2">
 
             {/* Big stat */}
             <div className="reveal-left" style={{ position: 'relative' }}>
@@ -104,7 +104,7 @@ export default function About() {
       {/* Areas + Standards */}
       <section ref={ref3} style={{ background: '#ece5da', padding: 'clamp(64px,8vw,112px) 0' }}>
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px' }} className="grid-cols-1 lg:grid-cols-2">
+          <div style={{ gap: '80px' }} className="grid grid-cols-1 lg:grid-cols-2">
 
             {/* Areas */}
             <div className="reveal-left">
