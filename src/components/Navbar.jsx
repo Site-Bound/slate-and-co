@@ -60,7 +60,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '4px' }} className="hidden md:flex">
+          <nav style={{ alignItems: 'center', gap: '4px' }} className="hidden md:flex">
             {LINKS.map(({ to, label }) => (
               <NavLink
                 key={to}
